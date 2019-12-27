@@ -6,4 +6,6 @@ from spider.knn_maoyan import KnnMaoYan
 
 if __name__ == '__main__':
     obj = KnnMaoYan()
-    obj.run()
+    detailsUrls = obj.outputUrls()
+    infos = obj.run(detailsUrls[1])
+    print(f"test:{infos}")

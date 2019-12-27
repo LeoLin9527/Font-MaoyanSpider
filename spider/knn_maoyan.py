@@ -21,7 +21,7 @@ class KnnMaoYan:
         }
         self.obj = Classify()
 
-    def sub_text(self,url):
+    def sub_text(self, url):
         resp = requests.get(url=url, headers=self.headers)
         text = resp.text
         b_font = self.get_font_content(text)
@@ -37,21 +37,23 @@ class KnnMaoYan:
 
         return text
 
-    def run(self):
+    def outputUrls(self):
         resp = requests.get(url=self.indexUrl, headers=self.headers)
         response = Selector(text=resp.text)
         detail_urls = response.xpath("//dl[@class='board-wrapper']/dd/a/@href").extract()
-        # print(detail_urls)
-        for url in detail_urls:
-            url = urljoin(self.indexUrl,url)
-            text = self.sub_text(url)
-            response = Selector(text=text)
-            name = response.xpath("//h3[@class='name']/text()").extract_first().strip()
-            score = response.xpath("//span[@class='index-left info-num ']/span/text()").extract_first()
-            boxoffice = response.xpath("//div[@class='movie-index-content box']/span/text()").extract_first()
 
-            print(f"{name}--评分{score}--票房{boxoffice}")
-            time.sleep(1)
+        return detail_urls
+
+    def run(self, durl):
+        url = urljoin(self.indexUrl, durl)
+        text = self.sub_text(url)
+        response = Selector(text=text)
+        name = response.xpath("//h3[@class='name']/text()").extract_first().strip()
+        score = response.xpath("//span[@class='index-left info-num ']/span/text()").extract_first()
+        boxoffice = response.xpath("//div[@class='movie-index-content box']/span[1]/text()").extract_first()
+        unit = response.xpath("//div[@class='movie-index-content box']/span[2]/text()").extract_first("")
+        boxunit = boxoffice + unit
+        return name, score, boxunit
 
     def get_map(self, font_coordinate_list, glyf_order):
         """

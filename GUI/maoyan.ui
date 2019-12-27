@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>Form</class>
+    <widget class="QWidget" name="Form">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>439</width>
+                <height>474</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Form</string>
+        </property>
+        <widget class="QWidget" name="">
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>411</width>
+                    <height>451</height>
+                </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QTableWidget" name="tableWidget">
+                        <column>
+                            <property name="text">
+                                <string>电影名</string>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>票房</string>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>评分</string>
+                            </property>
+                        </column>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QTextBrowser" name="textBrowser"/>
+                </item>
+                <item>
+                    <widget class="QProgressBar" name="progressBar">
+                        <property name="value">
+                            <number>0</number>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                        <item>
+                            <widget class="QPushButton" name="pushButton_start">
+                                <property name="text">
+                                    <string>开始爬取</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="pushButton_stop">
+                                <property name="text">
+                                    <string>停止爬取</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="pushButton_save">
+                                <property name="text">
+                                    <string>生成txt</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
