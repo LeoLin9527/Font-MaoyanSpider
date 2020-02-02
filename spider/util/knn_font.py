@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.neighbors import KNeighborsClassifier
 
-from util.get_train_font import get_font_data
+from spider.util.get_train_font import get_font_data
 
 
 class Classify:

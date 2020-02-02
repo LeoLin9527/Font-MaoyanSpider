@@ -1,6 +1,7 @@
 """
 @file:tran_maoyan.py
 @time:2019/12/16-20:13
+@info: 一般方式处理字体
 """
 import io
 import re

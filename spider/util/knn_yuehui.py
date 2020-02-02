@@ -1,7 +1,7 @@
 """
 @file:knn_yuehui.py
 @time:2019/12/21-22:53
-@info:约会数据预测
+@info: knn约会数据预测,与本项目无关
 """
 import numpy as np
 import matplotlib.pyplot as plt

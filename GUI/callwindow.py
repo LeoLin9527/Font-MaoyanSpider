@@ -138,8 +138,10 @@ class CrawlThread(QThread):
     def run(self):
         obj = KnnMaoYan()
         detail_urls = obj.outputUrls()
+        
         for url in detail_urls:
             name, score, boxunit = obj.run(url)
+
             print(name, score, boxunit)
             self.result_signal.emit(name, score, boxunit)
             time.sleep(1)

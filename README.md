@@ -19,19 +19,21 @@
 
 6、最后用解析到编码与数字的字典替换原响应中的&#x部分。
 
-![](/Pic/result.png)
+![](/common/Pic/result.png)
 
 ## 使用说明
 1、Python环境与依赖安装略过
+
 2、启动爬虫
 ```
 python run_the_spider.py
 ```
 3、可视化界面
 ```
+cd GUI
 python callwindow.py
 ```
-![](/Pic/gui.png)
+![](/common/Pic/gui.png)
 
 ## 欢迎关注
-![](/Pic/wechat.png)
+![](/common/Pic/wechat.png)
